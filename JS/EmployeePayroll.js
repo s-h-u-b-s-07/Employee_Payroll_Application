@@ -31,10 +31,26 @@ const salaryOutput = () => {
     });
 }
 
+function checkDate() {
+    console.log("checking Date");
+    const dateError = document.querySelector('#startDate');
+    try {
+        let date = day.value + " " + month.value + " " + year.value;
+        (new EmployeePayrollData()).startDate = new Date(Date.parse(date));
+        dateError.innerHTML = "";
+    } catch (e) {
+        console.error(e);
+        dateError.innerHTML = e;
+    }
+}
+
 function validateDate() {
     console.log("validating Date");
     const day = document.querySelector('#day');
     const month = document.querySelector('#month');
     const year = document.querySelector('#year');
+    day.addEventListener('input', checkDate);
+    month.addEventListener('input', checkDate);
+    year.addEventListener('input', checkDate);
 
 }
