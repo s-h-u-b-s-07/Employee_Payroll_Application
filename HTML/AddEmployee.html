@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initual-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googlrapies.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Employee payroll form</title>
     <link rel="stylesheet" href="../CSS/AddEmployee.css">
@@ -21,7 +21,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);return false" onreset="salaryReset();">
+        <form class="form" action="#" onsubmit="save();return false" onreset="resetForm();return false">
             <div class="form-head">
                 Employee payroll form
             </div>
@@ -158,7 +158,7 @@
                         <option value="2016">2016</option>
                     </select>
                 </div>
-                <error-output class="text-error" id="startDate"></error-output>
+                <error-output class="date-error" for="startDate"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
